@@ -26,26 +26,34 @@
 23. Media Queries
 24. Animations
 25. Some browser weird effects fixing
-
-
 -------------------------------------------------------------------*/
-
 /* ==============================
    1. Fixes
    ============================== */
-
-*, html { margin:0; padding:0; }
-.clearfix:after, .jt_row:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.clearfix, .jt_row {display: inline-block;}
-
-
-
-* html .clearfix, * html .jt_row {height: 1%;}
-
-.clearfix, .jt_row {display: block;}
-
-
-
+*, html {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:after,
+.jt_row:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix,
+.jt_row {
+	display: inline-block;
+}
+* html .clearfix,
+* html .jt_row {
+	height: 1%;
+}
+.clearfix,
+.jt_row {
+	display: block;
+}
 
 /* ==============================
    2. Common styles
@@ -68,7 +76,9 @@ body, input, textarea {
 	margin: 0px auto;
 }
 
-a:hover {text-decoration: none;}
+a:hover {
+	text-decoration: none;
+}
 
 .float-right {float:right !important;}
 .float-left {float:left !important;}
@@ -81,23 +91,20 @@ a:hover {text-decoration: none;}
 /* ==============================
    3. Custom fonts
    ============================== */
-
 @font-face {
-    font-family: Bitter;
-    src: url(../fonts/Bitter-Bold.otf);
+  font-family: Bitter;
+  src: url(../fonts/Bitter-Bold.otf);
 }
-
 
 /* ==============================
    4. Page loader
    ============================== */
-
 #mask {
-    background-color: #000000;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    z-index: 100000;
+  background-color: #000000;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 100000;
 }
 .loader {
   position: absolute;
@@ -122,10 +129,7 @@ a:hover {text-decoration: none;}
 .gold .color-picker .pickerTitle{background:#BBA965;}
 .red .color-picker .pickerTitle{background:#EE2C46;}
 
-
-
 .color-picker .picker-btn{
-
 	display: block;
 	cursor: pointer;
 	width: 50px;
@@ -235,7 +239,6 @@ a:hover {text-decoration: none;}
 /* ==============================
    6. Inview Animations
    ============================== */
-
 .jt_row {
 	opacity: 0;
 	-webkit-transition: opacity 1s ease-in;
@@ -243,48 +246,33 @@ a:hover {text-decoration: none;}
 	transition: opacity 1s ease-in;
 }
 
-#header .jt_row, .jt_row.visible {opacity: 1;}
-
-
-
-@-webkit-keyframes flipYloop
-{
-  from {
-	-webkit-transform:rotateY(0deg);
-  }
-
-  to {
-   	-webkit-transform:rotateY(180deg);
-  }
+#header .jt_row, .jt_row.visible {
+	opacity: 1;
 }
 
-@keyframes flipYloop
-{
-  from {
-	transform:rotateY(0deg);
-  }
-
-  to {
-   	transform:rotateY(180deg);
-  }
+@-webkit-keyframes flipYloop {
+  from { -webkit-transform:rotateY(0deg); }
+  to { -webkit-transform:rotateY(180deg); }
 }
 
+@keyframes flipYloop {
+  from { transform:rotateY(0deg); }
+  to { transform:rotateY(180deg); }
+}
 
 /* ==============================
    7. Header styles
    ============================== */
-
-.logo_elixir {
+.logo_la_matriarca {
 	display: inline-block;
 	float: left;
 	width: 110px;
 	height: 50px;
-	background: url("../images/logo_elixir.png") no-repeat;
+	background: url("../images/logo_la_matriarca.png") no-repeat;
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
-
 #header {
 	position: absolute;
 	top:0px;
@@ -296,135 +284,122 @@ a:hover {text-decoration: none;}
 	background: rgba(12,12,13,0.78);
 	padding-top: 20px;
 }
-	#header .container {width: 97%;}
-	.navbar-collapse {padding-right:0px;}
-	#header.overflow {
-		top:-100px;
-		left: 0px;
-		background-color: #fff!important;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.11);
-		-webkit-transition: all 0.3s ease-in;
-		-o-transition: all 0.3s ease-in;
-		transition: all 0.3s ease-in;
-		-webkit-font-smoothing: antialiased;
-	}
+#header .container {
+	width: 97%;
+}
+.navbar-collapse {
+	padding-right:0px;
+}
+#header.overflow {
+	top:-100px;
+	left: 0px;
+	background-color: #fff!important;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+	-webkit-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-font-smoothing: antialiased;
+}
+.navbar-nav{
+	display: block;
+	position: absolute;
+	right: 100px;
+}
+.navbar-brand{
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 12px;
+}
+#header.overflow .menu-item a {
+	font-size: 14px;
+	line-height: 21px;
+	color: #818181;
+	font-weight: 400;
+}
+#header.overflow .navbar-nav > li {
+	padding-bottom:13px;
+}
+#header.overflow.fixed {
+	top:0px;
+	position: fixed;
+	z-index:99999;
+}
+#header.overflow.fixed .navbar-brand.normal {
+	display: none;
+}
+#header.overflow.fixed .navbar-brand.mini {
+	display: block;
+	margin-top:-1px;
+}
+#header.overflow.fixed .navbar-brand.mini.darker {
+	display: none;
+}
+#header .navbar-brand {
+	padding:10px 0px;
+}
+.navbar-brand.mini {
+	display: none;
+}
+.navbar-collapse.navbar-right.navbar-main-collapse.in,
+.navbar-collapse.navbar-right.navbar-main-collapse.collapsing {
+	overflow: visible;
+}
+.navbar-main-collapse.in .navbar-nav, .navbar-main-collapse.collapsing .navbar-nav  {
+	position: absolute;
+	background: #282828;
+	background: rgba(40, 40, 40, 0.9);
+	width: 90%;
+	top: 100%;
+	left: 5%;
+	margin:0px;
+	height: auto;
+}
+.navbar-toggle {
+	margin: 0px;
+	height: 30px;
+	width: 30px;
+	border-radius: 0px;
+	border: 0px;
+	display: none;
+	margin:10px;
+	font-size: 30px;
+	line-height: 30px;
+	padding: 0px;
+	color:#fff;
+}
+.navbar-toggle.menu {
+	color:#000000;
+}
+#header.overflow.fixed .navbar-toggle {
+	color:#000;
+}
+#header .menu-item a {
+	color:#fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	line-height: 6px;
+	border-bottom:3px solid transparent;
+	text-shadow: 0px 0px 1px transparent;
+}
+header a span {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-style: italic;
+	font-size: 14px;
+	color: #ffffff;
+	margin-left: 10px;
+	line-height: 50px;
+}
+#header .menu-item.current a, #header .menu-item a:hover {
+	background-color: transparent;
+	color: #c0a756;
+	text-shadow: 0px 0px 1px transparent;
+}
 
-
-
-	.navbar-nav{
-		display: block;
-		position: absolute;
-		right: 100px;
-
-	}
-
-	.navbar-brand{
-		display: block;
-		position: absolute;
-		left: 100px;
-		top: 12px;
-	}
-
-
-
-	#header.overflow .menu-item a {
-		font-size: 14px;
-		line-height: 21px;
-		color: #818181;
-		font-weight: 400;
-	}
-
-	#header.overflow .navbar-nav > li {padding-bottom:13px;}
-
-	#header.overflow.fixed {
-		top:0px;
-		position: fixed;
-		z-index:99999;
-	}
-
-	#header.overflow.fixed .navbar-brand.normal {display: none;}
-
-	#header.overflow.fixed .navbar-brand.mini {
-		display: block;
-		margin-top:-1px;
-	}
-
-	#header.overflow.fixed .navbar-brand.mini.darker {display: none;}
-
-	#header .navbar-brand {padding:10px 0px;}
-
-	.navbar-brand.mini { display: none; }
-
-	.navbar-collapse.navbar-right.navbar-main-collapse.in, .navbar-collapse.navbar-right.navbar-main-collapse.collapsing {
-		overflow: visible;
-
-	}
-
-	.navbar-main-collapse.in .navbar-nav, .navbar-main-collapse.collapsing .navbar-nav  {
-		position: absolute;
-		background: #282828;
-		background: rgba(40, 40, 40, 0.9);
-		width: 90%;
-		top: 100%;
-		left: 5%;
-		margin:0px;
-		height: auto;
-
-	}
-
-	.navbar-toggle {
-		margin: 0px;
-		height: 30px;
-		width: 30px;
-		border-radius: 0px;
-		border: 0px;
-		display: none;
-		margin:10px;
-		font-size: 30px;
-		line-height: 30px;
-		padding: 0px;
-		color:#fff;
-	}
-
-	.navbar-toggle.menu {
-		color:#000000;
-	}
-
-	#header.overflow.fixed .navbar-toggle {
-		color:#000;
-	}
-
-	#header .menu-item a {
-		color:#fff;
-		text-transform: uppercase;
-		font-size: 14px;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		line-height: 6px;
-		border-bottom:3px solid transparent;
-		text-shadow: 0px 0px 1px transparent;
-	}
-
-	header a span{
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 600;
-		font-style: italic;
-		font-size: 14px;
-		color: #ffffff;
-		margin-left: 10px;
-		line-height: 50px;
-	}
-
-	#header .menu-item.current a, #header .menu-item a:hover {
-		background-color: transparent;
-		color: #c0a756;
-		text-shadow: 0px 0px 1px transparent;
-	}
-
-	#header .jt_row {padding-top:0px;}
-
-
-
+#header .jt_row {padding-top:0px;}
 
 /* ==============================
    8. Different home styles
