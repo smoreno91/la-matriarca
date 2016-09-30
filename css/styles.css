@@ -654,9 +654,6 @@ header a span {
 	background: #fff;
 	overflow: hidden;
 }
-.section#footer {
-	overflow: visible;
-}
 .section .full-width {
 	padding-top:0px;
 	width: 100%;
@@ -1664,48 +1661,21 @@ a.button.contact:hover, .button.contact:hover {
    ============================== */
 
 #footer {
-	background:#141313;
+	background: url('../images/bg_footer.png') no-repeat center center;
 	text-align: center;
 	font-size: 20px;
 	color:#606060;
 	position: relative;
 	height: 240px;
 	padding-top: 75px;
+	overflow: visible;
 }
-#footer .scrollup {
-	width: 69px;
-	height: 54px;
-	background:url('../images/scrollup.png') no-repeat;
-	position: absolute;
-	top:-124px;
-	left: 50%;
-	margin-left:-27px;
-	text-indent: -9999999px;
-}
-#footer .scrollup:hover {background-position: 0px bottom;}
-.single #footer .scrollup, #footer .scrollup.home {display: none;}
-
-#footer .thanks {
-	width: 350px;
-	font-family: "Raleway";
-	text-transform: uppercase;
-	height: 350px;
-	padding:200px 100px 100px 100px;
-	border-radius: 50%;
-	background:url('../images/like.png') center 40% no-repeat #f4405b;
-	color:#fff;
-	font-weight: 300;
-	margin:0px auto 60px auto;
-}
-#footer .thanks a {color:#fff;}
 #footer .social-title {
 	font-weight: 300;
 	text-transform: uppercase;
 	margin-bottom:50px;
 	font-family: "Raleway";
 }
-
-
 #footer .social-title2 {
 	font-weight: 400;
 	font-style: italic;
@@ -1713,27 +1683,26 @@ a.button.contact:hover, .button.contact:hover {
 	font-family: "Libre Baskerville";
 	margin-bottom: 10px;
 }
-
 #footer .social li {
 	display: inline;
 	margin:0px 2px;
 	list-style: none;
 }
 #footer .social li .icon {
-	background: #3D3C38;
+	background: #fff;
 	display: inline-block;
 	width: 60px;
 	height: 60px;
 	text-align: center;
-	font-size: 32px;
+	font-size: 36px;
 	line-height: 60px;
-	color:#ffffff;
+	color: #000;
 	border-radius: 50%;
 	transition: all 0.5s ease;
 }
-
-#footer .social li .icon:hover {background:#C1A667;}
-
+#footer .social li .icon:hover {
+	background: #561C34;
+}
 ul.social {
 	margin-top: 15px;
 }
@@ -1755,23 +1724,24 @@ ul.social {
   white-space: nowrap;
   background: RGBA(153, 153, 150, 0.8) url(../images/cd-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
+  z-index: 999;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
 }
-.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
   -moz-transition: opacity .3s 0s, visibility 0s 0s;
   transition: opacity .3s 0s, visibility 0s 0s;
 }
 .cd-top.cd-is-visible {
-  /* the button becomes visible */
   visibility: visible;
   opacity: 1;
 }
 .cd-top.cd-fade-out {
-  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .8;
 }
 .no-touch .cd-top:hover {
@@ -2086,7 +2056,7 @@ img {
 	.contact-form .text.area {
 		max-width: 100%;
 	}
-	#footer .scrollup {top:-75px;}
+	
 	.carousel-wrapper.full .generic-carousel .owl-item .project .featured-info {
 		top: 20px;
 		left: 50%;
@@ -2472,60 +2442,48 @@ a.button.menu:after, .button.menu:after {
 		font-size: 18px;
 		margin-bottom:50px;
 	}
-	#maps, .inner-map {height: 350px;}
-	.contact-form .col {width: 100%;}
-
-	#footer .thanks {
-		width: 150px;
-		height: 150px;
-		padding: 100px 50px 50px 50px;
-		text-indent: -999999px;
-		background-position: center center;
+	#maps, .inner-map {
+		height: 350px;
 	}
-	#footer {padding-bottom:70px;}
-	#footer .social li {margin: 0px;}
+	.contact-form .col {
+		width: 100%;
+	}
+	#footer {
+		padding-bottom:70px;
+	}
+	#footer .social li {
+		margin: 0px;
+	}
 	.modal-form {
 		border-radius: 0px;
 		width: 100%;
 		padding:20px;
 		height: auto;
 	}
-
-
-	.slide-content p {margin-top:60px;}
-	.corner {display: none !important;}
-
+	.slide-content p {
+		margin-top:60px;
+	}
+	.corner {
+		display: none !important;
+	}
 	.mouse {
 		width: 40px;
 		height: 40px;
 		margin-left: -20px;
 		bottom:15px;
 	}
-
-
-
-	h2.section-title:before, h2.section-title:after {
-		content: none;
-	}
-	section.reservations h4:before{
-		/*content: "-  ";
-		color: #C1A667;*/
-		content: none;
-	}
+	h2.section-title:before,
+	h2.section-title:after,
+	section.reservations h4:before,
 	section.reservations h4:after{
-		/*content: "  -";
-		color: #C1A667;*/
 		content: none;
 	}
-
 	section.timetable h2.section-title {
 		font-size: 16px;
-
 	}
 	section.timetable h2.section-title img {
 		width: 60px;
 	}
-
 	img.center-no-margin {
 		margin-bottom: 1em;
 	}
@@ -2555,7 +2513,7 @@ a.button.menu:after, .button.menu:after {
 	.carousel-wrapper.with_buttons:hover .owl-controls .owl-buttons div.owl-prev {left: -17px;}
 	.carousel-wrapper.with_buttons:hover .owl-controls .owl-buttons div.owl-next {right: -17px;}
 	.section .separator {margin-bottom: 0px;}
-	#footer .scrollup {display: none;}
+	
 	#footer .social li .icon {margin:0px 5px;}
 	#footer .social {margin:0px -40px;}
 	.subtitle.mini.darker {color:#888;}
