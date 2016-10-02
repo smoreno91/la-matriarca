@@ -4,15 +4,10 @@
 // Avoid `console` errors in browsers that lack a console.
 "use strict";
 
-$(window).load(function() {
-	$(".loader").delay(500).fadeOut();
-	$("#mask").delay(1000).fadeOut("slow");
-});
-
 $(document).ready(function(){
 	
 	/* Google Maps Footer Map */
-	var color = "#561C34", latitude = 6.2115904, longitude = -75.5720584;
+	var color = "#561C34", latitude = 6.2096163, longitude = -75.5724058;
 	
 	function wpgmappity_maps_loaded() {
 		var styles = [
@@ -82,7 +77,7 @@ $(document).ready(function(){
 			scrollwheel			: false,
 			panControl 			: false,
 			zoom 						: 17,
-			styles					: styles
+			//styles					: styles
 		};
 		
 		var wpgmappitymap = new google.maps.Map(document.getElementById('wpgmappitymap'), options);
@@ -98,7 +93,9 @@ $(document).ready(function(){
 	}
 	
 	window.onload = function() {
-		wpgmappity_maps_loaded();
+		if($("#maps".length)){
+			wpgmappity_maps_loaded();	
+		}
 	};
 	
 });
