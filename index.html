@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
  	<link rel="stylesheet" href="css/styles.css" />
-    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.transitions.css" rel="stylesheet">
-    <link href="css/YTPlayer.css" rel="stylesheet">
- 	<link href="css/swipebox.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="js/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="js/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="css/YTPlayer.css">
+ 	<link rel="stylesheet" href="css/swipebox.css">
   
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
      
@@ -44,9 +44,7 @@
     <header id="header" role="banner">
         <div class="jt_row container">
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars"></i></button>
                 <a class="navbar-brand normal logo" href="#home">
                     <div class="logo_la_matriarca"></div>
                 </a>
@@ -61,12 +59,11 @@
             <!-- BEGIN NAVIGATION MENU-->
             <nav class="collapse navbar-collapse navbar-right navbar-main-collapse" role="navigation">
                 <ul id="nav" class="nav navbar-nav navigation">
-                    <li class="page-scroll menu-item"><a href="#home-slider">Home</a></li>
-                    <li class="page-scroll menu-item"><a href="#about">About</a></li>
-                    <li class="page-scroll menu-item"><a href="#menu">Menu</a></li>
-                    <li class="page-scroll menu-item"><a href="#gallery">Gallery</a></li>
-                    <li class="page-scroll menu-item"><a href="#reservations">Reservations</a></li>
-                    <li class="page-scroll menu-item"><a href="#contact">Location</a></li>
+                    <li class="page-scroll menu-item"><a href="#home-slider">La Matriarca</a></li>
+                    <li class="page-scroll menu-item"><a href="#about">Mi casa</a></li>
+                    <li class="page-scroll menu-item"><a href="#menu">Menú</a></li>
+                    <li class="page-scroll menu-item"><a href="/galeria.html">Galería</a></li>
+                    <li class="page-scroll menu-item"><a href="#contact">Escribeme</a></li>
                 </ul>
             </nav>
             <!-- EN NAVIGATION MENU -->
@@ -81,53 +78,40 @@
             <div class="item"><img src="images/slider/slide-1.jpg" alt="Slide 1"></div>
         </div>
         <!-- BOTTOM ANIMATED ARROW -->
-        <a href="#about" class="page-scroll menu-item"><div class="mouse"><span></span></div></a>
+        <a href="#horarios" class="page-scroll menu-item">
+            <div class="mouse"><span></span></div>
+        </a>
     </section>
     <!-- END HOME SLIDER SECTION -->
     
     <!-- BEGIN TIMETABLE SECTION -->
-    <section id="timetable" class="section timetable parallax">
+    <section id="horarios" class="section timetable parallax">
         <div class="container">
             <div class="jt_row jt_row-fluid row">
-            	<span class="column-divider"></span>
                 <div class="col-md-12 jt_col column_container">
                     <h2 class="section-title">
-                        <span class="timetable-decorator"></span>
-                        <span class="opening-hours">Opening Hours</span>
-                        <span class="timetable-decorator2"></span>
+                        <span class="opening-hours">Horario de atención</span>
                     </h2>
                 </div>
                 
-                <div class="col-md-12 jt_col column_container">    
-                    <div class="section-subtitle">
-                        Call For Reservations
-                    </div>
+                <div class="col-md-4 jt_col column_container">    
+                    <div class="section-subtitle days">Lunes a míércoles</div>
+                    <div class="section-subtitle hours">12:00 m. | 10:00 p.m.</div>
                 </div>
                 
-                <div class="col-md-3 col-md-offset-3 jt_col column_container">    
-                    <div class="section-subtitle days">
-                        Sunday to Tuesday
-                    </div>
-                    <div class="section-subtitle hours">
-                        09:00<br>24:00
-                    </div>
+                <div class="col-md-4 jt_col column_container">    
+                    <div class="section-subtitle days">Jueves a Sábado</div>
+                    <div class="section-subtitle hours">12:00 m. | 12:00 a.m.</div>
                 </div>
-
                 
-                <div class="col-md-3 jt_col column_container">    
-                    <div class="section-subtitle days">
-                        Friday and Saturday
-                    </div>
-                    <div class="section-subtitle hours">
-                        08:00<br>03:00
-                    </div>
+                <div class="col-md-4 jt_col column_container">    
+                    <div class="section-subtitle days">Domingos</div>
+                    <div class="section-subtitle hours">12:00 m. | 5:00 p.m.</div>
                 </div>
+                
                 <div class="col-md-12 jt_col column_container">    
-                    <div class="number">
-                        RESERVATION NUMBER: 0842-5484214
-                    </div>
+                    <div class="number">Cualquier cosa llamame (4) 488 6874</div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -137,89 +121,89 @@
     <section id="menu" class="section menu">
 
         <div class="container">
-                <div class="jt_row jt_row-fluid row">
-                    <div class="col-md-12 jt_col column_container">
-                     <div class="voffset100"></div>
-                        <img class="center menu-logo" src="images/menu_logo.png" alt="Menu Logo">
-                        <div class="voffset100"></div>
-                    </div>
-                    
-                    <div class="col-md-4 jt_col column_container">    
-                        <h3>Prime Steaks</h3>
-                        <ul>
-                            <li>
-                                Filet
-                                <div class="detail">7 oz. Center Cut10 oz. Double cut<span class="price">$14.49</span></div>
-                            </li>
-                            <li>
-                                Boine in filet
-                                <div class="detail">10 oz Greg Norman Ranch, Australia<span class="price">$20.50</span></div>
-                            </li>
-                            <li>
-                                New York Strip
-                                <div class="detail">9 oz. Center Cut12 oz. Double cut  oz <span class="price">$9.99</span></div>
-                            </li>
-                            <li>
-                                Porterhouse
-                                <div class="detail">7 oz. Center Cut10 oz. Double cut<span class="price">$7.99</span></div>
-                            </li>
-                            <li>
-                                Delmonico
-                                <div class="detail">10 oz Greg Norman Ranch, Australia<span class="price">$17.99</span></div>
-                            </li>
-                        </ul>
-                    </div>
-                  
-                    <div class="col-md-4 jt_col column_container">    
-                        <h3>Drinks & Wines</h3>
-                        <ul>
-                            <li>Raimat Abadia
-                                <div class="detail">Complex, Dark Cherry, Spice, bodied<span class="price">$8.50</span></div>
-                            </li>
-                            <li>Eden Chardonnay
-                                <div class="detail">Elegant, Lemon, Vanilla, bodied<span class="price">$15.50</span></div>
-                            </li>
-                            <li>Mailly Brut Reserva
-                                <div class="detail">Dry, Toast, Citrus, Medium-bodied <span class="price">$17.50</span></div>
-                            </li>
-                            <li>Leon V de Armenia
-                                <div class="detail">Crisp, Citrus, Full-bodied<span class="price">$12.50</span></div>
-                            </li>
-                            <li>Caberenet Sauvignon
-                                <div class="detail">Intense, Cherry, Chocolate, Full-bodied<span class="price">$30.50</span></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 jt_col column_container">    
-                        <h3>Desserts</h3>
-                        <ul>
-                            <li>
-                                Creme Brulee
-                                <div class="detail">Creme Anglaise, Vanilla Bean Ice Cream <span class="price">$7.49</span></div>
-                            </li>
-                            <li>
-                                Warm chocolate
-                                <div class="detail">Amarena Cherries, Kirsch Cream<span class="price">$6.50</span></div>
-                            </li>
-                            <li>
-                                Cheese cake
-                                <div class="detail">Cheese creme, ice cream, strawberry <span class="price">$4.50</span></div>
-                            </li>
-                            <li>
-                                Apple Turnover
-                                <div class="detail">Creme Anglaise, Vanilla Bean Ice Cream<span class="price">$7.99</span></div>
-                            </li>
-                            <li>
-                                Sorbet with fruit
-                                <div class="detail">Lemon, organge, strawberry or mango<span class="price">$8.50</span></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-md-offset-4 jt_col column_container">    
-                        <a href="menu.html" class="button menu center">View Complete Menu</a>
-                    </div>
-                    
+            <div class="jt_row jt_row-fluid row">
+                <div class="col-md-12 jt_col column_container">
+                 <div class="voffset100"></div>
+                    <img class="center menu-logo" src="images/menu_logo.png" alt="Menu Logo">
+                    <div class="voffset100"></div>
                 </div>
+                
+                <div class="col-md-4 jt_col column_container">    
+                    <h3>Prime Steaks</h3>
+                    <ul>
+                        <li>
+                            Filet
+                            <div class="detail">7 oz. Center Cut10 oz. Double cut<span class="price">$14.49</span></div>
+                        </li>
+                        <li>
+                            Boine in filet
+                            <div class="detail">10 oz Greg Norman Ranch, Australia<span class="price">$20.50</span></div>
+                        </li>
+                        <li>
+                            New York Strip
+                            <div class="detail">9 oz. Center Cut12 oz. Double cut  oz <span class="price">$9.99</span></div>
+                        </li>
+                        <li>
+                            Porterhouse
+                            <div class="detail">7 oz. Center Cut10 oz. Double cut<span class="price">$7.99</span></div>
+                        </li>
+                        <li>
+                            Delmonico
+                            <div class="detail">10 oz Greg Norman Ranch, Australia<span class="price">$17.99</span></div>
+                        </li>
+                    </ul>
+                </div>
+              
+                <div class="col-md-4 jt_col column_container">    
+                    <h3>Drinks & Wines</h3>
+                    <ul>
+                        <li>Raimat Abadia
+                            <div class="detail">Complex, Dark Cherry, Spice, bodied<span class="price">$8.50</span></div>
+                        </li>
+                        <li>Eden Chardonnay
+                            <div class="detail">Elegant, Lemon, Vanilla, bodied<span class="price">$15.50</span></div>
+                        </li>
+                        <li>Mailly Brut Reserva
+                            <div class="detail">Dry, Toast, Citrus, Medium-bodied <span class="price">$17.50</span></div>
+                        </li>
+                        <li>Leon V de Armenia
+                            <div class="detail">Crisp, Citrus, Full-bodied<span class="price">$12.50</span></div>
+                        </li>
+                        <li>Caberenet Sauvignon
+                            <div class="detail">Intense, Cherry, Chocolate, Full-bodied<span class="price">$30.50</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 jt_col column_container">    
+                    <h3>Desserts</h3>
+                    <ul>
+                        <li>
+                            Creme Brulee
+                            <div class="detail">Creme Anglaise, Vanilla Bean Ice Cream <span class="price">$7.49</span></div>
+                        </li>
+                        <li>
+                            Warm chocolate
+                            <div class="detail">Amarena Cherries, Kirsch Cream<span class="price">$6.50</span></div>
+                        </li>
+                        <li>
+                            Cheese cake
+                            <div class="detail">Cheese creme, ice cream, strawberry <span class="price">$4.50</span></div>
+                        </li>
+                        <li>
+                            Apple Turnover
+                            <div class="detail">Creme Anglaise, Vanilla Bean Ice Cream<span class="price">$7.99</span></div>
+                        </li>
+                        <li>
+                            Sorbet with fruit
+                            <div class="detail">Lemon, organge, strawberry or mango<span class="price">$8.50</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-md-offset-4 jt_col column_container">    
+                    <a href="menu.html" class="button menu center">View Complete Menu</a>
+                </div>
+                
+            </div>
         </div>
         <div class="voffset30"></div>
     </section>
@@ -232,71 +216,42 @@
         <div class="container">
             <div class="jt_row jt_row-fluid row">
                 <div class="col-md-12 jt_col column_container">
-                    <h2 class="section-title">About Us</h2>
+                    <h2 class="section-title">Mi casa</h2>
                 </div> 
-                <div class="col-md-6 col-md-offset-3 jt_col column_container">    
-                    <div class="section-subtitle">
-                        We love restaurants as much as you do. That’s why we’ve been helping them fill tables since 1999. Welcome to elixir restaurant 
-                    </div>
-                </div>
-
 
                 <div class="col-md-6 jt_col column_container">
-                    <h2 class="heading font-smoothing">The History</h2>
-                    <p class="text">
-                        The <strong>History of Kitchens</strong> and Cooks gives further intimation on Mr Boulanger 
-                        usual menu, stating confidently that "Boulanger served salted poultry and 
-                        fresh eggs, all presented without a tablecloth on small marble tables". 
-                        Numerous commentators have also referred to the supposed restaurant 
-                        owner's eccentric habit of touting for custom outside his establishment, 
-                        dressed in aristocratic fashion and brandishing a sword
-                    </p>
-                    <p class="text">
-                        According to Miss Spang, there is not a shred of evidence for any of it. 
-                        She said: These legends just get passed on by hearsay and then spiral 
-                        out of control. Her interest in <strong>Boulanger</strong> dates back to a history of 
-                        food seminar in Paris in the mid-1990s
-                    </p>
-                    
-                    <div class="ornament"></div>
+                    <p class="text">¡Qué delicia esto! Mirá, yo ya tengo cierta edad, con nietos a bordo y toda la vaina, pero es que no me puedo estar quieta. Soy feliz echando cháchara y tomándome mis copitas con mis amigas, eso sí, muy de vez en cuando pues; pero lo que adoro hacer es cocinar.</p>
+                    <p class="text">Mi mamá y mi abuela me enseñaron cuando yo era muchacha, y a mí me quedó ese amor por la cocina. Allí me llegan los recuerdos de la casa, de la cantaletosa de mi mamá, de los desayunos con mis hermanos, de esos días bellos con la familia, y ese es el toque secreto que me inspira y le pongo a mis platos para hacerlos bien diferentes.</p>
+                    <p class="text">¡Ah sí! Es que no vas a encontrar nada igual; me gusta explorar ingredientes, mezclas y sabores para tener algo tradicional, pero nuevo. ¡Ay mijo! Cuénteme pues de dónde va a sacar un plato como salido de mi cocina sino acá.</p>
+                    <p class="text">Aquí viven metidos mis hijos, mis nueras y mis nietos, como les alcahueteo todos los antojos pues de acá no salen. Vení vos también a La Matriarca que yo te preparo algo para que quedes chupándote los dedos.</p>
                 </div>  
 
                 <div class="col-md-6 jt_col column_container">
                     <div id="owl-about" class="owl-carousel">
-                            <div class="item"><img src="images/about01.jpg" alt=""></div>
-                            <div class="item"><img src="images/about02.jpg" alt=""></div>
-                            <div class="item"><img src="images/about03.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/superior/02.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/superior/04.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/superior/05.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/superior/06.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/superior/09.jpg" alt=""></div>
                     </div>
                 </div> 
             </div>
+            
             <div class="jt_row jt_row-fluid row">
                 <div class="col-md-6 jt_col column_container">
                     <div class="voffset10"></div>
                     <div id="owl-about2" class="owl-carousel">
-                            <div class="item"><img src="images/about04.jpg" alt=""></div>
-                            <div class="item"><img src="images/about05.jpg" alt=""></div>
-                            <div class="item"><img src="images/about06.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/inferior/01.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/inferior/03.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/inferior/07.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/inferior/08.jpg" alt=""></div>
+                        <div class="item"><img src="images/mi-casa/inferior/10.jpg" alt=""></div>
                     </div>
                 </div>  
 
-
-
                 <div class="col-md-6 jt_col column_container">
-
-                    <p class="text">
-                        The <strong>History of Kitchens</strong> and Cooks gives further intimation on Mr Boulanger 
-                        usual menu, stating confidently that "Boulanger served salted poultry and 
-                        fresh eggs, all presented without a tablecloth on small marble tables". 
-                        Numerous commentators have also referred to the supposed restaurant 
-                        owner's eccentric habit of touting for custom outside his establishment, 
-                        dressed in aristocratic fashion and brandishing a sword
-                    </p>
-                    <p class="text">
-                        According to Miss Spang, there is not a shred of evidence for any of it. 
-                        She said: These legends just get passed on by hearsay and then spiral 
-                        out of control. Her interest in <strong>Boulanger</strong> dates back to a history of 
-                        food seminar in Paris in the mid-1990s
-                    </p>
+                    <p class="text">¿Qué creíste pues? Yo también me luzco preparando mariscos y pescados porque me sé los secreticos de aquí y de allá. Cuando iba de paseo a la costa nos quedabamos en la finca de un tío mío, y a mí me encantaba meterme a las cocinas de allá.</p>
+                    <p class="text">Aprendí de doña Eleonor, una matrona costeña de racamandaca, a enamorar por la barriga con ceviches deliciosos, arroz caldoso que se te hace agua la boca y más platos que acá en La Matriarca te voy a preparar con todo el amor del mundo.</p>
                 </div> 
             </div>
 
@@ -315,41 +270,33 @@
             <div class="jt_row jt_row-fluid row">
 
                 <div class="col-md-12 jt_col column_container">
-                    <h2 class="section-title">Contact</h2>
+                    <h2 class="section-title">Contacto</h2>
                 </div>
-                <div class="col-md-6 col-md-offset-3 jt_col column_container">
-                    <div class="section-subtitle">
-                        W325 State Road 123 Mondovi, WI  (Wisconsin)   98746-54321
+                
+                <form action="mail.php" method="post" id="contactform" class="contact-form">
+                    <div class="col-md-6 jt_col column_container">    
+                        <input type="text" id="name" name="name" class="text name required" placeholder="Nombre" >
+                        <input type="email" id="email" name="email" class="text email required" placeholder="Email" >
+                        <input type="text" id="subject" name="subject" placeholder="Asunto" >
                     </div>
-                </div>
-                    <form action="mail.php" method="post" id="contactform" class="contact-form">
-                            <div class="col-md-6 jt_col column_container">    
-                                <input type="text" id="name" name="name" class="text name required" placeholder="Name" >
-                                <input type="email" id="email" name="email" class="tex email required" placeholder="Email" >
-                                <input type="text" id="subject" name="subject" placeholder="Subject" >
-                            </div>
 
-                            <div class="col-md-6 jt_col column_container">    
-                                 <textarea id="message" name="message" class="text area required" placeholder="Message" rows="10"></textarea>
-                            </div>
+                    <div class="col-md-6 jt_col column_container">    
+                         <textarea id="message" name="message" class="text area required" placeholder="¡Contame!" rows="10"></textarea>
+                    </div>
 
-                            <div class="col-md-4 col-md-offset-4 jt_col column_container"> 
-                            <div class="formSent"><strong>Your Message Has Been Sent!</strong> Thank you for contacting us.</div>    
-                            <input type="submit" class="button contact center" value="Submit" >
-                            </div>
-                            
-                        </form>
+                    <div class="col-md-4 col-md-offset-4 jt_col column_container"> 
+                        <div class="formSent"><strong>¡Tu mensaje ha sido enviado!</strong> Gracias por contactarnos</div>    
+                        <input type="submit" class="button contact center" value="Enviar" >
+                    </div>
+                        
+                </form>
                 <div class="voffset100"></div>
             </div>
-                <div class="voffset50"></div>
+            <div class="voffset50"></div>
         </div>
         
     </section>
     <!-- END CONTACT SECTION -->
-
-
-
-
 
     <!-- BEGIN MAP SECTION -->
     <section id="maps">
@@ -359,9 +306,6 @@
         </div>
     </section>
     <!-- END MAP SECTION -->
-
-
-    
 
     <!-- BEGIN FOOTER -->
     <footer id="footer" class="section" role="contentinfo">
@@ -386,6 +330,7 @@
         </div>
     </footer>
     <!-- END FOOTER -->
+    
     <a href="#0" class="cd-top">Top</a>
     <!-- BEGIN Scripts-->
 

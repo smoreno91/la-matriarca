@@ -34,18 +34,6 @@
 	margin: 0;
 	padding: 0;
 }
-.clearfix:after,
-.jt_row:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-.clearfix,
-.jt_row {
-	display: inline-block;
-}
 * html .clearfix,
 * html .jt_row {
 	height: 1%;
@@ -53,6 +41,14 @@
 .clearfix,
 .jt_row {
 	display: block;
+}
+.clearfix:after,
+.jt_row:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 
 /* ==============================
@@ -225,7 +221,8 @@ a:hover {
 .navbar-collapse.navbar-right.navbar-main-collapse.collapsing {
 	overflow: visible;
 }
-.navbar-main-collapse.in .navbar-nav, .navbar-main-collapse.collapsing .navbar-nav  {
+.navbar-main-collapse.in .navbar-nav,
+.navbar-main-collapse.collapsing .navbar-nav  {
 	position: absolute;
 	background: #282828;
 	background: rgba(40, 40, 40, 0.9);
@@ -247,11 +244,9 @@ a:hover {
 	padding: 0px;
 	color:#fff;
 }
-.navbar-toggle.menu {
-	color:#000000;
-}
+.navbar-toggle.menu,
 #header.overflow.fixed .navbar-toggle {
-	color:#000;
+	color: #000;
 }
 #header .menu-item a {
 	color:#fff;
@@ -263,7 +258,7 @@ a:hover {
 	border-bottom:3px solid transparent;
 	text-shadow: 0px 0px 1px transparent;
 }
-header a span {
+#header a span {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	font-style: italic;
@@ -312,15 +307,13 @@ header a span {
 	position: relative;
 }
 
-
-
-
 /* ==============================
    9. Top wrap
    ============================== */
 
-.owl-carousel .owl-item {text-align: center;}
-
+.owl-carousel .owl-item {
+	text-align: center;
+}
 .slider-wrap {
 	background: #000;
 	position: relative;
@@ -613,17 +606,6 @@ header a span {
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
-.ornament {
-	display: block;
-	width: 65px;
-	height: 35px;
-	background:url("../images/ornament.png");
-	background-repeat: no-repeat;
-	content: " ";
-	margin: 0 auto;
-}
-
-
 
 /* ==============================
    12. Separators
@@ -647,7 +629,6 @@ header a span {
 /* ==============================
    13. Sections styling
    ============================== */
-
 .section {
 	margin-bottom:-140px;
 	padding-top: 66px;
@@ -678,7 +659,8 @@ header a span {
 .section.dark h2{
 	color: #ffffff;
 }
-.section.dark input[type="text"], .section.dark input[type="email"]{
+.section.dark input[type="text"],
+.section.dark input[type="email"]{
 	background: #2C2A2A;
 	border: none;
 	height: 80px;
@@ -687,8 +669,6 @@ header a span {
 	background: #2C2A2A;
 	border: none;
 }
-
-
 
 .section .jt_row.overlap {
 	padding-bottom:0px;
@@ -766,11 +746,19 @@ h2.section-title {
 	text-transform: uppercase;
 	margin-bottom: 40px;
 }
-h2.section-title:before, h2.section-title:after {
-	content:url("../images/header_decorator.png");
-	margin: 14px;
-	color: #D1BC87;
-	vertical-align: text-bottom;
+h2.section-title:before,
+h2.section-title:after {
+	content: '';
+  border: 1px solid #383733;
+  width: 42%;
+  position: absolute;
+  top: 17px;
+}
+h2.section-title:before {
+  left: 0;
+}
+h2.section-title:after {
+  right: 0;
 }
 .section-subtitle {
 	text-align: center;
@@ -831,56 +819,30 @@ section h2.title {
    ============================== */
 
 section.timetable {
-	background-image: url("../images/parallax/opening_hours.jpg");
+	background-image: url("../images/horarios.png");
 	padding-top: 30px;
 	padding-bottom: 40px;
 	min-height: 528px;
 }
-
 .opening-hours {
 	display: inline-block;
 	vertical-align: top;
 }
-
-.timetable-decorator {
-	display: inline-block;
-	width: 200px;
-	height: 110px;
-	background:url("../images/timetable-decorator.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: " ";
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-.timetable-decorator2 {
-	display: inline-block;
-	width: 200px;
-	height: 110px;
-	background:url("../images/timetable-decorator2.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: " ";
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
 section.timetable h2{
 	color: #ffffff;
 	font-family: "Oswald", sans-serif;
 	font-size: 39px;
 	font-weight: 700;
-	padding-top: 4px;
+	padding-top: 30px;
 	line-height: 110px;
 	vertical-align: top;
+	margin-bottom: 20px;
 }
 
-section.timetable h2.section-title:before, section.timetable h2.section-title:after {
-	content:none;
+section.timetable h2.section-title:before,
+section.timetable h2.section-title:after {
+	content: none;
 }
-
 
 section.timetable .section-subtitle {
 	color: #B29859;
@@ -913,20 +875,6 @@ section.timetable .number {
 	font-weight: 400;
 	font-size: 14px;
 	text-align: center;
-}
-
-section.timetable .column-divider{
-	overflow: hidden;
-	background-image: url("../images/column-divider.png");
-	background-repeat: no-repeat;
-	position: absolute;
-	display: block;
-	left: 49.6%;
-	margin-top: 135px;
-	padding: 50% 1%;
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
 }
 
 /* FUN FACTS Hour */
@@ -1011,20 +959,15 @@ section.menu .subtitle{
 section.menu .title.first {
 	margin-top: 130px;
 }
-
-
 section.menu .title:before {
-content: url("../images/menu_title_line.png");
-margin-right: 20px;
- }
-
- section.menu .title:after {
-content: url("../images/menu_title_line.png");
-margin-left: 20px;
- }
-
-
-section.menu ul li{
+	content: url("../images/menu_title_line.png");
+	margin-right: 20px;
+}
+section.menu .title:after {
+	content: url("../images/menu_title_line.png");
+	margin-left: 20px;
+}
+section.menu ul li {
 	text-transform: uppercase;
 	font-family: "Cabin", sans-serif;
 	font-weight: 700;
@@ -1032,11 +975,9 @@ section.menu ul li{
 	color: #0c0901;
 	margin-bottom: 20px;
 }
-
 section.menu ul.menu li{
 	font-size: 20px;
 }
-
 section.menu ul li .detail{
 	display: block;
 	text-transform: none;
@@ -1044,11 +985,9 @@ section.menu ul li .detail{
 	color: #484745;
 	font-size: 15px;
 }
-
 section.menu ul li .detail{
 	font-size: 16px;
 }
-
 section.menu span{
 	font-family: "Cabin", sans-serif;
 	font-weight: 700;
@@ -1067,14 +1006,13 @@ section.menu span{
 
 .center-no-margin {
 	display: block;
-  	margin: 0 auto;
-  	margin-bottom: 0em;
-  	margin-top: 2em;
+	margin: 0 auto;
+	margin-bottom: 0em;
+	margin-top: 2em;
 }
 
-a.button, .button{
+a.button, .button {
 	display: block;
-
 	margin: 0 auto;
 	font-family: "Cabin", sans-serif;
 	font-weight: 700;
@@ -1097,7 +1035,7 @@ a.button:hover, .button:hover {
 	color: #ffffff;
 }
 
-a.button.menu, .button.menu{
+a.button.menu, .button.menu {
 	display: block;
 	margin: 0 auto;
 	font-family: "Cabin", sans-serif;
@@ -1170,16 +1108,13 @@ ul.submenu > li:last-child {
 	transition: all 0.3s ease-in;
 	-webkit-font-smoothing: antialiased;
 }
-
 ul li:hover .submenu {
 	visibility: visible;
 	opacity: 1;
 }
-
 #header .menu-item.current .submenu a {
   color: #fff;
 }
-
 #header .menu-item.current .submenu a:hover {
 	color: #bfa760;
 }
@@ -1187,96 +1122,6 @@ ul li:hover .submenu {
 /* ==============================
    17. Reservations section
    ============================== */
-
-section.reservations{
-	-webkit-transition: 1s all ease;
-	-o-transition: 1s all ease;
-	transition: 1s all ease;
-}
-
-.reservations_logo {
-	display: block;
-	width: 70px;
-	height: 58px;
-	background:url("../images/reservations_logo.png");
-	background-repeat: no-repeat;
-	margin:0 auto;
-	content: " ";
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
-section.reservations h4{
-	font-family: "Yellowtail";
-	font-size: 25px;
-	color: #141313;
-	text-align: center;
-	font-weight: 400;
-}
-
-
-
-section.reservations h4 {
-  line-height: 0.5;
-  text-align: center;
-}
-section.reservations h4 span {
-  display: inline-block;
-  position: relative;
-}
-section.reservations h4 span:before,
-section.reservations h4 span:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  border-bottom: 1px solid #B4A767;
-  top: 5px;
-  width: 144px;
-}
-section.reservations h4 span.above:before,
-section.reservations h4 span.above:after {
-  width: 120px;
-}
-section.reservations h4 span:before {
-  right: 100%;
-  margin-right: 10px;
-}
-section.reservations h4 span:after {
-  left: 100%;
-  margin-left: 10px;
-}
-
-
-section.reservations h3 {
-	text-transform: uppercase;
-	color: #444342;
-	text-align: center;
-	font-family: "Oswald",sans-serif;
-	font-size: 48px;
-	font-weight: 400;
-	margin: 15px 0px 15px 0px;
-}
-section.reservations h3.reservation-phone{
-	font-weight: 300;
-	margin-bottom: 10px;
-}
-
-section.reservations p {
-	font-family: "Cabin", sans-serif;
-	font-weight: 500;
-	color: #7d7a7a;
-	font-size: 18px;
-	text-align: center;
-	margin: 20px 0px;
-}
-
-section.reservations .contact-form p{
-	text-align: left;
-	color: #101010;
-	font-size: 1.4em;
-}
-
 input, textarea {
 	width: 100%;
 	height: 100%;
@@ -1293,7 +1138,6 @@ input, textarea {
 	-moz-border-radius: 0px;
 	-webkit-appearance: none;
 }
-
 .formSent {
 	margin: 10px;
 	text-align: center;
@@ -1301,26 +1145,28 @@ input, textarea {
 	color: #cbc8c8;
 	display: none;
 }
-
 textarea {
 	margin-bottom: 0px;
+	resize: none;
+	padding-bottom: 20px;
+	min-height: 180px;
 }
-
-.section.dark input, .section.dark textarea {
+.section.dark input,
+.section.dark textarea {
 	margin-bottom: 44px;
 }
 
-
-textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+textarea:focus,
+input:focus,
+input[type]:focus
+.uneditable-input:focus {
  border-color: #C1A667;
  box-shadow:0 0 8px #C1A667;
  outline: 0 none;
 }
 
 textarea {
-	resize: none;
-	padding-bottom: 20px;
-	min-height: 180px;
+	
 }
 
 .section.dark textarea {
@@ -1356,84 +1202,6 @@ textarea {
 
 input , textarea{
 	color: #4b4747;
-}
-
-
-
-
-/* ==============================
-   17. Reservations section
-   ============================== */
-
-
-section.testimonials {
-	background-image: url("../images/parallax/testimonials.jpg");
-	min-height: 505px;
-}
-
-.testimonials_img {
-	display: block;
-	width: 110px;
-	height: 110px;
-	background:url("../images/testimonials_logo.png");
-	margin:0 auto;
-	content: " ";
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-section.testimonials h2 {
-	text-align: left;
-	font-family: "Oswald", sans-serif;
-	font-weight: 300;
-	font-size: 2em;
-	color: #bfa760;
-	text-transform: uppercase;
-}
-section.testimonials h2 span {
-	position: absolute;
-	font-family: Bitter;
-	right: 0;
-	font-weight: 700;
-	font-size: 72px;
-}
-section.testimonials h2:after {
-	content:'';
-	width:40px;
-	height:3px;
-	background:#e2e9ed;
-	position:absolute;
-	bottom:-5px;
-	left: 36px;
-}
-
-section.testimonials h2:before,
-section.testimonials h2:after {
-	content: "";
-}
-
-.item p{
-	font-family: "Cabin", sans-serif;
-	text-align: left;
-	font-weight: 400;
-	color: #e2e9ed;
-	font-size: 25px;
-	line-height: 1.8em;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.item span.author{
-	font-family: "Cabin", sans-serif;
-	font-style: italic;
-	font-size: 20px;
-	color: #bfa760;
-	font-weight: 700;
-	float: left;
-}
-
-.item span.author:before {
-	content: "- ";
 }
 
 
@@ -1599,13 +1367,6 @@ a.button.contact:hover, .button.contact:hover {
 .carousel-wrapper.with_pagination .owl-controls .owl-page.active span,
 .carousel-wrapper.with_pagination .owl-controls.clickable .owl-page:hover span {
 	background: #C1A667;
-}
-.testimonials.carousel-wrapper.with_pagination .owl-theme .owl-controls .owl-page span {
-	background: transparent;
-}
-.testimonials.carousel-wrapper.with_pagination .owl-controls .owl-page.active span,
-.testimonials.carousel-wrapper.with_pagination .owl-controls.clickable .owl-page:hover span {
-	background:#C1A667;
 }
 
 .carousel-wrapper.with_pagination #owl-story .owl-pagination {margin-bottom:130px;}
@@ -2094,17 +1855,6 @@ img {
 	}
 	.team-wrapper .team-member .hover .name {font-size: 22px;}
 
-	.section.testimonials {
-	padding: 40px;
-}
- section.timetable .column-divider{
-	display: none;
-}
-
-.testimonials_img {
-	margin-top: -40px;
-	margin-bottom: 40px;
-}
 
 
 .opening-hours h2{
@@ -2121,10 +1871,6 @@ section.timetable .days {
 
 section.timetable .number a{
 	color: #ffffff;
-}
-
-section.reservations h3 a {
-	color: #444342;
 }
 
 #owl-main-text h2 {
@@ -2166,13 +1912,6 @@ section.menu .title:before, section.menu .title:after {
 }
 
 /* END 768 media querie*/
-
-
-
-.section.testimonials {
-	padding: 10px;
-}
-
 
 @media only screen and (max-width : 990px) {
 	.section {text-align: left;}
@@ -2234,10 +1973,6 @@ a.button.menu:after, .button.menu:after {
 		float: none;
 	}
 
-	section.reservations h4:after, section.reservations h4:before {
-		content: none;
-	}
-
 	.col-md-3 .title {
 		margin-left: 0px;
 	}
@@ -2257,8 +1992,7 @@ a.button.menu:after, .button.menu:after {
 	.clients-list {margin-top:0px;}
 	.section .title.medium {font-size:20px;}
 	.separator {margin-bottom:-80px;}
-	#contact .jt_col {margin-bottom:0px;}
-	.testimonials.carousel-wrapper .item {font-size:16px;}
+	
 	.section .text {margin-top:-35px;}
 	.slide-sep {
 		margin-bottom: 100px;
@@ -2316,19 +2050,9 @@ a.button.menu:after, .button.menu:after {
 		font-size: 28px;
 	}
 
-	section.reservations h3 {
-		font-size: 28px;
-		margin: 15px 0px 15px 0px;
-
-	}
-
 	.section.about {
 		padding-bottom: 50px;
 	}
-	.testimonials_img {
-		margin-top: 0px;
-	}
-
 
 	a.button.menu {
 		width: auto;
@@ -2431,12 +2155,12 @@ a.button.menu:after, .button.menu:after {
 	}
 	.entry {
     padding: 0 0px 0px 0;
-	width: 100%;
-}
+		width: 100%;
+		}
 	a.next-project {top:20px;}
 	.address {margin-bottom:10px;}
 	.address-title {margin-top:10px;}
-	.testimonials.carousel-wrapper {background-size: contain;}
+	
 	.section .title.medium {
 		margin-top:0px;
 		font-size: 18px;
@@ -2473,9 +2197,7 @@ a.button.menu:after, .button.menu:after {
 		bottom:15px;
 	}
 	h2.section-title:before,
-	h2.section-title:after,
-	section.reservations h4:before,
-	section.reservations h4:after{
+	h2.section-title:after {
 		content: none;
 	}
 	section.timetable h2.section-title {
@@ -2526,102 +2248,81 @@ a.button.menu:after, .button.menu:after {
 		width: 100%;
 	}
 
-	.timetable-decorator {
-		width: 0px;
+	nav.primary ul li{
+		display: block;
+		width: 100%;
 	}
-	 .timetable-decorator2 {
-	 	width: 0px;
-	 }
-nav.primary ul li{
-	display: block;
-	width: 100%;
-}
-
-h2.section-title {
-	font-size: 24px;
-}
-h2.section-title:before, h2.section-title:after {
+	
+	h2.section-title {
+		font-size: 24px;
+	}
+	h2.section-title:before,
+	h2.section-title:after {
 		content: none;
 	}
 
-section.reservations h3 a {
-	color: #444342;
-	font-size: 26px;
-}
-
-input, textarea {
-	border-radius: 0px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-appearance: none;
-}
-
-.testimonials_img {
-	margin-bottom: 40px;
-}
-
-.section.dark input[type="text"] {
-	height: 70px;
-}
-
-.section.dark textarea {
-	min-height: 200px;
-}
-
-.section.dark input, .section.dark textarea {
-	margin-bottom: 20px;
-}
+	input, textarea {
+		border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-appearance: none;
+	}
+	
+	.section.dark input[type="text"] {
+		height: 70px;
+	}
+	
+	.section.dark textarea {
+		min-height: 200px;
+	}
+	
+	.section.dark input, .section.dark textarea {
+		margin-bottom: 20px;
+	}
 
 
 
-section.menu .title {
-	margin-top: 40px;
-	margin-bottom: -20px;
-	text-align: center;
-	margin-left: 0px;
-}
-section.menu .subtitle {
-	font-size: 20px;
-}
+	section.menu .title {
+		margin-top: 40px;
+		margin-bottom: -20px;
+		text-align: center;
+		margin-left: 0px;
+	}
+	section.menu .subtitle {
+		font-size: 20px;
+	}
+	
+	section.menu .title.first {
+		margin-top: 120px;
+	}
+	
+	section.menu .title:before, section.menu .title:after {
+		content: "";
+	}
 
-section.menu .title.first {
-	margin-top: 120px;
-}
-
-section.menu .title:before, section.menu .title:after {
-	content: "";
-}
-
-.logointro {
+	.logointro {
 		width: 160px;
 		height: 137px;
 		background-size: cover;
 		margin-top: 160px;
 		margin-bottom: 10px;
+	}
+	#owl-main-text {
+		margin-top:20px;
+	}
+
+	.slide-sep {
+		margin-top: -80px;
+	}
+	
+	a.button.contact, .button.contact {
+		width: 100%;
+		font-size: 28px;
+	}
 
 }
-	#owl-main-text {margin-top:20px;}
 
-
-
-.slide-sep {
-	margin-top: -80px;
-}
-
-a.button.contact, .button.contact {
-	width: 100%;
-	font-size: 28px;
-}
-
-
-
-
-
-}
 @media only screen and (min-width : 320px) and (max-width : 568px) {
-
-
-
 	h2.section-title:before, h2.section-title:after {
 		margin: 5px;
 	}
@@ -2849,32 +2550,23 @@ span.dark {
   /* ie8- graceful degradation */
   background-position:50% 50% !important;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-size: cover;
 
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Retina-specific stuff here */
-    section.timetable{
-		background: url("../images/parallax/opening_hours.jpg");
+  /* Retina-specific stuff here */
+  section.timetable{
+		background: url("../images/horarios.png");
 		background-size: cover;
 		/* custom background-position */
-    	background-position:50% 50%;
-    	/* ie8- graceful degradation */
-    	background-position:50% 50% !important;
-  background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* ie8- graceful degradation */
+    background-position: 50% 50% !important;
+  	background-repeat: no-repeat;
 	}
 
-	section.testimonials {
-		background: url("../images/parallax/testimonials.jpg");
-		background-size: cover;
-		/* custom background-position */
-    	background-position:50% 50%;
-    	/* ie8- graceful degradation */
-    	background-position:50% 50% !important;
-  background-repeat: no-repeat;
-	}
 }
 
 /* ======================================
@@ -2887,12 +2579,9 @@ body, input, textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-
 @media (max-height: 800px) {
-    .mouse {
-        display: none;
-
-    }
-
+	.mouse {
+		display: none;
+	}
 }
 
