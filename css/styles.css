@@ -609,7 +609,7 @@ a:hover {
 }
 h2.section-title {
 	text-align: center;
-	font-family: JosefinSlab, "Helvetica Neue";
+	font-family: JosefinSlab-Bold, "Helvetica Neue";
 	font-weight: 600;
 	font-size: 28px;
 	color:#383733;
@@ -694,7 +694,7 @@ section.timetable {
 }
 section.timetable h2{
 	color: #E5DDCE;
-	font-family: JosefinSlab, "Helvetica Neue", sans-serif;
+	font-family: JosefinSlab-Bold, "Helvetica Neue", sans-serif;
 	font-size: 39px;
 	font-weight: bold;
 	padding-top: 30px;
@@ -1022,7 +1022,7 @@ section.contact {
 a.button.contact, .button.contact{
 	display: block;
 	margin: 0 auto;
-	font-family: JosefinSlab, "Helvetica Neue", sans-serif;
+	font-family: JosefinSlab-Bold, "Helvetica Neue", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
