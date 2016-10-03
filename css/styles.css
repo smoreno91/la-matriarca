@@ -63,6 +63,14 @@ a:hover {
 	text-decoration: none;
 }
 
+.float-right { float: right !important;}
+.float-left  { float: left !important;}
+.float-none  { float: none !important;}
+.text-right  { text-align: right;}
+.text-center { text-align: center;}
+.text-left 	 { text-align: left;}
+.clear-both  { clear: both}
+
 .overlay {
   background: url(../images/overlay.png);
   opacity: 0.2;
@@ -74,14 +82,6 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-
-.float-right {float:right !important;}
-.float-left {float:left !important;}
-.float-none {float:none !important;}
-.text-right {text-align: right;}
-.text-center {text-align: center;}
-.text-left {text-align:left;}
-
 
 /* ==============================
    3. Custom fonts
@@ -170,7 +170,7 @@ a:hover {
 	z-index: 1001;
 	width: 100%;
 	height: 90px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: JosefinSlab, "Helvetica Neue", sans-serif;
 	background: rgba(255, 255, 255, 0.78);
 	padding-top: 20px;
 }
@@ -273,7 +273,7 @@ a:hover {
 	text-shadow: 0px 0px 1px transparent;
 }
 #header a span {
-	font-family: 'Open Sans', sans-serif;
+	font-family: JosefinSlab, "Helvetica Neue", sans-serif;
 	font-weight: 600;
 	font-style: italic;
 	font-size: 14px;
@@ -554,7 +554,7 @@ a:hover {
 	padding-bottom:0px;
 }
 .title {
-	font-family: "Cabin";
+	font-family: JosefinSlab-Bold, "Helvetica Neue";
 	font-weight: 600;
 	font-size: 28px;
 	color:#383733;
@@ -605,7 +605,7 @@ a:hover {
 }
 .subtitle {
 	font-size: 18px;
-	font-family: "Libre Baskerville";
+	font-family: JosefinSlab-Bold, "Helvetica Neue";
 	font-style: italic;
 	font-weight: 400;
 	color:#fff;
@@ -657,7 +657,7 @@ h2.section-title:after {
 	font-weight: normal;
 }
 h2.heading{
-	font-family: "Great Vibes", serif;
+	font-family: JosefinSlab-Bold, "Helvetica Neue", sans-serif;
 	font-size: 62px;
 	color: #c0a756;
 	margin-bottom: 30px;
@@ -671,8 +671,7 @@ p.text {
 	font-size: 17px;
 	font-weight: 400;
 	color: #777777;
-	margin-bottom: 40px;
-	line-height: 32px;
+	margin-bottom: 22px;
 }
 p.text strong{
 	color: #c0a756;
@@ -735,35 +734,6 @@ section.timetable .number {
 	font-size: 22px;
 	text-align: center;
 }
-/* FUN FACTS Hour */
-.f-element{
-	width: 295px;
-	height: auto;
-	float: left;
-	text-align: center;
-}
-.f-ico{
-	background: url("../img/facts.png") #4cddf3;
-	width: 73px;
-	height: 71px;
-	margin: 0 auto 20px;
-}
-.highlight{
-	font-weight: 300;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 100px;
-	color: #000000;
-	line-height: 75px;
-}
-.milestone-details{
-	font-weight: 300;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	color: #7f7f7f;
-	text-transform: uppercase;
-	padding: 20px 0 100px;
-	letter-spacing: 1px;
-}
 
 /* ==============================
    16. Menu section
@@ -801,7 +771,7 @@ section.menu .subtitle{
 	color: #bfa760;
 	display: block;
 	margin: 0 auto;
-	font-family: "Yellowtail";
+	font-family: Overlock, "Helvetica Neue", sans-serif;
 	font-size: 26px;
 	text-align: center;
 	margin-top: 15px;
@@ -810,7 +780,6 @@ section.menu .title.first {
 	margin-top: 130px;
 }
 section.menu ul li {
-	text-transform: uppercase;
 	font-family: Overlock, "Helvetica Neue", sans-serif;
 	font-weight: 700;
 	font-size: 15px;
@@ -845,7 +814,7 @@ section.menu span{
 a.button, .button {
 	display: block;
 	margin: 0 auto;
-	font-family: "Cabin", sans-serif;
+	font-family: JosefinSlab-Bold, "Helvetica Neue";
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
@@ -876,8 +845,8 @@ a.button.menu,
 	border: none;
 	color: #fff;
 	padding: 16px 10px;
-	margin-top: 68px;
-	margin-bottom: 23px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	background: #262626;
 	-webkit-transition: 0.5s all ease;
 	-o-transition: 0.5s all ease;
@@ -1064,19 +1033,6 @@ a.button.contact:hover,
 	height: 240px;
 	padding-top: 75px;
 	overflow: visible;
-}
-#footer .social-title {
-	font-weight: 300;
-	text-transform: uppercase;
-	margin-bottom:50px;
-	font-family: "Raleway";
-}
-#footer .social-title2 {
-	font-weight: 400;
-	font-style: italic;
-	margin-bottom:40px;
-	font-family: "Libre Baskerville";
-	margin-bottom: 10px;
 }
 #footer .social li {
 	display: inline;
