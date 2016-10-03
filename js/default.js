@@ -72,6 +72,11 @@
         }, scroll_top_duration
       );
     });
+    
+    //Scroll to sections
+    if (!$('#ip-container').hasClass('single')) {
+      $('#nav').onePageNav();
+    }
         
     /**** CAROUSELS ****/
     if($("#owl-about").length){
