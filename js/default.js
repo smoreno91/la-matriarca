@@ -76,25 +76,25 @@
     /**** CAROUSELS ****/
     if($("#owl-about").length){
       $("#owl-about").owlCarousel({
-        navigation : false,
+        navigation: false,
         pagination: false,
         autoPlay: true,
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem : true,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
         transitionStyle: "fade",
       });  
     }
     
     if($("#owl-about2").length){
       $("#owl-about2").owlCarousel({
-        navigation : true,
+        navigation: true,
         navigationText: [ "<", ">" ],
         pagination: true,
         autoPlay: false,
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem : true,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
       });
     }
     
@@ -105,12 +105,12 @@
 
     if($("a[data-rel^='prettyPhoto']").length){
       $("a[data-rel^='prettyPhoto']").prettyPhoto({
-        animationSpeed:'slow',
-        theme:'light_square',
-        slideshow:false,
+        animationSpeed: 'slow',
+        theme: 'light_square',
+        slideshow: false,
         overlay_gallery: false,
-        social_tools:false,
-        deeplinking:false
+        social_tools: false,
+        deeplinking: false
       }); 
     }
     
@@ -150,19 +150,13 @@
         paginationSpeed : 400,
   	    afterInit: function() {
           $('#home-slider').height($(window).height());
-          if (!$('#home-slider').hasClass('fixed-height')) {
-            $('#home-slider #owl-main .item').height($(window).height());
-            $('#home-slider #owl-main img').height($(window).height());
-          } else {
-            $('#home-slider #owl-main .item').height(600);
-          }
-  
+          $('#home-slider #owl-main .item').height($(window).height());
+          $('#home-slider #owl-main img').height($(window).height());
           $('#home-slider #owl-main img').width('auto');
   
           var left = ((($('#home-slider').width() - $('#home-slider #owl-main img').width())/2));
           if (left<0) {
             $('#home-slider #owl-main img').css('top', '0px' );
-  
             $('#home-slider #owl-main img').css('left', left + 'px' );
           } else {
             $('#home-slider #owl-main img').css('left', '0px' );
