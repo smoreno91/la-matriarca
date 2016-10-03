@@ -54,7 +54,6 @@
 /* ==============================
    2. Common styles
    ============================== */
-
 body, input, textarea {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -62,6 +61,18 @@ body, input, textarea {
 }
 a:hover {
 	text-decoration: none;
+}
+
+.overlay {
+  background: url(../images/overlay.png);
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
 }
 
 .float-right {float:right !important;}
@@ -295,15 +306,13 @@ a:hover {
 	max-width: none;
 	top: 0;
 }
-#owl-main .owl-prev {
+#owl-main .owl-prev,
+#owl-main .owl-next {
 	width: 79px;
 	height: 79px;
-	background: url(../images/btn-prev.png) no-repeat center center;
 	font-size: 0;
-	float: left;
-	margin-left: 15px;
 	position: relative;
-	opacity: 0.3;
+	opacity: 0.8;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: opacity .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
@@ -311,21 +320,15 @@ a:hover {
 	z-index:9999;
 	background-color: rgba(255,255,255,.01);
 }
+#owl-main .owl-prev {
+	background: url(../images/btn-prev.png) no-repeat center center;
+	float: left;
+	margin-left: 15px;
+}
 #owl-main .owl-next {
-	width: 79px;
-	height: 79px;
 	background: url(../images/btn-next.png) no-repeat center center;
-	font-size: 0;
 	float: right;
 	margin-right: 18px;
-	position: relative;
-	opacity: 0.3;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: opacity .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-	z-index:9999;
-	background-color: rgba(255,255,255,.01);
 }
 #owl-main .owl-pagination {
 	display: none;
@@ -768,18 +771,15 @@ section.timetable .number {
 section.menu {
 	padding-bottom: 40px;
 	padding-top: 0px;
-	background-image: url("../images/menu_left.jpg"), url("../images/menu_right.jpg");
-	background-position: top left, top right;
-	background-repeat: no-repeat;
-	min-height: 950px;
+	background: url("../images/bg_menu.jpg") center center/cover no-repeat;
 }
 section.menu h3{
 	text-transform: uppercase;
 	text-align: center;
-	color: #887025;
-	font-family: "Oswald", sans-serif;
-	font-size: 24px;
-	font-weight: 400;
+	color: #561C34;
+	font-family: Overlock, "Helvetica Neue", sans-serif;
+	font-size: 28px;
+	font-weight: bold;
 	margin-bottom: 33px;
 }
 section.menu ul{
@@ -809,17 +809,9 @@ section.menu .subtitle{
 section.menu .title.first {
 	margin-top: 130px;
 }
-section.menu .title:before {
-	content: url("../images/menu_title_line.png");
-	margin-right: 20px;
-}
-section.menu .title:after {
-	content: url("../images/menu_title_line.png");
-	margin-left: 20px;
-}
 section.menu ul li {
 	text-transform: uppercase;
-	font-family: "Cabin", sans-serif;
+	font-family: Overlock, "Helvetica Neue", sans-serif;
 	font-weight: 700;
 	font-size: 15px;
 	color: #0c0901;
@@ -833,17 +825,15 @@ section.menu ul li .detail{
 	text-transform: none;
 	font-weight: 400;
 	color: #484745;
-	font-size: 15px;
-}
-section.menu ul li .detail{
 	font-size: 16px;
 }
-section.menu span{
-	font-family: "Cabin", sans-serif;
-	font-weight: 700;
-	font-style: italic;
+section.menu ul li .name {
 	font-size: 18px;
-	color: #bfa760;
+	font-family: Overlock, "Helvetica Neue", sans-serif;
+	color: #561C34;
+}
+section.menu span{
+	font-weight: normal;
 	float: right;
 	text-align: left;
 }
@@ -868,7 +858,6 @@ a.button, .button {
 	-webkit-transition: 0.5s all ease;
 	-o-transition: 0.5s all ease;
 	transition: 0.5s all ease;
-	height: 70px;
 }
 a.button:hover,
 .button:hover {
@@ -879,34 +868,21 @@ a.button.menu,
 .button.menu {
 	display: block;
 	margin: 0 auto;
-	font-family: "Cabin", sans-serif;
-	font-weight: 500;
+	font-family: JosefinSlab, "Helvetica Neue", sans-serif;
+	font-weight: normal;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 18px;
-	color: #bfa760;
-	border: 2px solid #bfa760;
+	border: none;
+	color: #fff;
 	padding: 16px 10px;
 	margin-top: 68px;
 	margin-bottom: 23px;
-	background: transparent;
+	background: #262626;
 	-webkit-transition: 0.5s all ease;
 	-o-transition: 0.5s all ease;
 	transition: 0.5s all ease;
 	width: 260px;
-	height: 65px;
-}
-a.button.menu:before,
-.button.menu:before {
-	content: url("../images/button_line.png");
-	position: absolute;
-	right: 350px;
-}
-a.button.menu:after,
-.button.menu:after {
-	content: url("../images/button_line.png");
-	position: absolute;
-	left: 350px;
 }
 
 /*Sub Menu*/
@@ -1117,10 +1093,11 @@ a.button.contact:hover,
 	line-height: 60px;
 	color: #000;
 	border-radius: 50%;
-	transition: all 0.5s ease;
+	transition: all 0.6s ease;
 }
 #footer .social li .icon:hover {
 	background: #561C34;
+	color: #fff;
 }
 ul.social {
 	margin-top: 15px;
@@ -1322,9 +1299,6 @@ img {
 	
 	.jt_row {
 		opacity: 1;
-	}
-	.section.menu {
-		background-image: none;
 	}
 	.navbar-nav {
 		right: 50px;
@@ -1549,11 +1523,8 @@ img {
 	a {
 		color: #ffffff;
 	}
-	section.menu span{
-		font-size: 12px;
-	}
 	section.menu ul li .detail {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.opening-hours {
 		margin-top: 30px;
