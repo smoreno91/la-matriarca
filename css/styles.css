@@ -620,7 +620,7 @@ h2.section-title:before,
 h2.section-title:after {
 	content: '';
   border: 1px solid #383733;
-  width: 42%;
+  width: 40%;
   position: absolute;
   top: 17px;
 }
@@ -630,13 +630,20 @@ h2.section-title:before {
 h2.section-title:after {
   right: 0;
 }
+.gallery h2.section-title:before,
+.gallery h2.section-title:after {
+  border: 1px solid #fff;
+}
 .section-subtitle {
 	text-align: center;
-	font-family: "Cabin";
+	font-family: Overlock, "Helvetica Neue", sans-serif;
 	font-weight: 400;
 	font-size: 17px;
-	color:#777777;
+	color: #777;
 	margin-bottom: 60px;
+}
+.gallery .section-subtitle {
+	color: #fff;
 }
 .subsection-title h3 {
 	font-size: 42px;
@@ -1193,16 +1200,16 @@ nav.primary ul li  {
   list-style:none;
 }
 nav.primary ul li a {
-	font-size: 16px;
+	font-size: 18px;
 	width: auto;
-	font-family: "Cabin", sans-serif;
-	padding:0 28px;
-	border-bottom:2px solid transparent;
+	font-family: JosefinSlab-Bold, "Helvetica Neue", sans-serif;
+	padding: 0 28px;
+	border-bottom: 2px solid transparent;
 	font-weight: 600;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
-	color:#ffffff;
+	color: #fff;
 }
 nav.primary ul li a span {
 	height: 37px;
@@ -1211,7 +1218,7 @@ nav.primary ul li a span {
 }
 nav.primary ul li a.selected span, nav.primary ul li a span:hover {
 	background-color: transparent;
-	border-bottom-color:#C1A667;
+	border-bottom-color: #561C34;
 }
 section.gallery .section-subtitle {
 	display: block;
@@ -1350,7 +1357,6 @@ img {
 	.navbar-brand.mini img { margin-top:3px; }
 	.navbar-nav > li { padding: 15px 6px 15px 5px; }
 	#header .menu-item a, #header.overflow .menu-item a {
-		font-size: 11px;
 		line-height: 18px;
 		padding-bottom:14px;
 	}
