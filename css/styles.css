@@ -528,16 +528,9 @@ a:hover {
    13. Sections styling
    ============================== */
 .section {
-	margin-bottom:-140px;
 	padding-top: 66px;
 	background: #fff;
 	overflow: hidden;
-}
-.section .jt_row {
-	padding-bottom:140px;
-}
-.section.about .jt_row {
-	padding-bottom: 55px;
 }
 .section.dark {
 	background: #141313;
@@ -689,21 +682,12 @@ section h2.title {
 }
 
 /* ==============================
-   14. About section
-   ============================== */
-.section.about {
-	padding-bottom: 200px;
-}
-
-/* ==============================
    15. Opening hours section
    ============================== */
-
 section.timetable {
 	background-image: url("../images/bg-horarios.png");
 	padding-top: 30px;
 	padding-bottom: 40px;
-	min-height: 528px;
 }
 .opening-hours {
 	display: inline-block;
@@ -747,7 +731,7 @@ section.timetable .number {
    16. Menu section
    ============================== */
 section.menu {
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	padding-top: 0px;
 	background: url("../images/bg-menu.jpg") center center/cover no-repeat;
 }
@@ -1039,8 +1023,8 @@ a.button.contact:hover,
 	font-size: 20px;
 	color:#606060;
 	position: relative;
-	height: 240px;
-	padding-top: 75px;
+	height: 180px;
+	padding-top: 50px;
 	overflow: visible;
 }
 #footer .social li {
@@ -1342,9 +1326,6 @@ img {
 
 	.contact-form .col.col2 {margin-right: 0px;}
 
-	.section .jt_row {padding-bottom:100px;}
-	
-	.section {margin-bottom:-100px;}
 	#maps, .inner-map {height: 701px;}
 	.contact-form .text {font-size: 17px;}
 	.jt_row.container {
@@ -1363,7 +1344,8 @@ img {
 	}
 	
 	section.timetable {
-		padding-top: 1px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 	}
 	
 	section.timetable .days {
@@ -1394,9 +1376,6 @@ img {
 	section.menu .title:before,
 	section.menu .title:after {
 		content: none;
-	}
-	.section.about {
-		padding-bottom: 100px;
 	}
 
 }
@@ -1463,8 +1442,8 @@ img {
 		margin-left: 0px;
 	}
 	
-	.section .jt_row {padding-bottom:60px;}
-	.section {margin-bottom:-60px;}
+
+	
 
 	.section .title.medium {font-size:20px;}
 	
