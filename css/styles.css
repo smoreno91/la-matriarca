@@ -453,6 +453,9 @@ section.about .jt_row {
 /* ==============================
    11. Main home slider styling
    ============================== */
+#home-slider {
+	margin-top: 90px;
+}
 .mouse {
   display: block;
 	width: 45px;
@@ -648,9 +651,6 @@ h2.section-title:after {
 	font-size: 17px;
 	color: #777;
 	margin-bottom: 60px;
-}
-.gallery .section-subtitle {
-	color: #fff;
 }
 .subsection-title h3 {
 	font-size: 42px;
@@ -1154,6 +1154,11 @@ section.gallery .section-subtitle {
 	margin: 0 auto;
 	margin-bottom: 45px;
 	max-width: 650px;
+  border-top: 2px solid white;
+	border-bottom: 2px solid white;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 19px;
 }
 .main {
   padding:0;

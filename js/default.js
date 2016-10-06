@@ -144,7 +144,7 @@
     /* Home background slider */
     if($("#owl-main").length){
   		$("#owl-main").owlCarousel({
-  			autoPlay: 200,
+  			autoPlay: 5000,
   			navigation: true,
         goToFirst: true,
         goToFirstSpeed: 2000,
