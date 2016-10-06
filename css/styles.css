@@ -376,6 +376,9 @@ a:hover {
 /* ==============================
    10. About section sliders
    ============================== */
+section.about .jt_row {
+	margin-bottom: 30px;
+}
 #owl-about2 .owl-prev {
 	width: 79px;
 	height: 79px;
