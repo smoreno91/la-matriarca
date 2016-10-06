@@ -453,9 +453,6 @@ section.about .jt_row {
 /* ==============================
    11. Main home slider styling
    ============================== */
-#home-slider {
-	margin-top: 90px;
-}
 .mouse {
   display: block;
 	width: 45px;
@@ -639,6 +636,7 @@ h2.section-title:after {
 }
 .gallery {
 	background: url('../images/mosaico.png') repeat center center !important;
+	padding-top: 140px;
 }
 .gallery h2.section-title:before,
 .gallery h2.section-title:after {
@@ -651,6 +649,9 @@ h2.section-title:after {
 	font-size: 17px;
 	color: #777;
 	margin-bottom: 60px;
+	-webkit-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	transition: 0.5s all ease;
 }
 .subsection-title h3 {
 	font-size: 42px;
@@ -967,6 +968,10 @@ input[type]:focus
 section.contact {
 	background: url('../images/mosaico.png') repeat center center !important;
 }
+section.contact h2.section-title:before,
+section.contact h2.section-title:after{
+	border: 1px solid #fff;
+}
 a.button.contact, .button.contact{
 	display: block;
 	margin: 0 auto;
@@ -1054,6 +1059,26 @@ a.button.contact:hover,
 ul.social {
 	margin-top: 15px;
 }
+.footer-liebre {
+	float: left;
+}
+.footer-liebre span{
+	font-size: 12px;
+	font-family: "Helvetica Neue", sans-serif;
+  margin-right: 8px;
+}
+.footer-liebre a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -ms-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+}
+.footer-liebre a:hover{
+	color: #dadada;
+}
 .cd-top {
   display: inline-block;
   height: 40px;
@@ -1132,13 +1157,21 @@ nav.primary ul li a {
 	font-size: 18px;
 	width: auto;
 	font-family: JosefinSlab-Bold, "Helvetica Neue", sans-serif;
-	padding: 0 28px;
+	margin: 0 28px;
 	border-bottom: 2px solid transparent;
 	font-weight: 600;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
 	color: #fff;
+	-webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -ms-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+}
+nav.primary ul li a:hover {
+	color: #F2590C;
 }
 nav.primary ul li a span {
 	height: 37px;
@@ -1147,18 +1180,15 @@ nav.primary ul li a span {
 }
 nav.primary ul li a.selected span, nav.primary ul li a span:hover {
 	background-color: transparent;
-	border-bottom-color: #561C34;
+	border-bottom-color: #F2590C;
 }
 section.gallery .section-subtitle {
+	color: #fff;
 	display: block;
+	font-size: 20px;
 	margin: 0 auto;
 	margin-bottom: 45px;
 	max-width: 650px;
-  border-top: 2px solid white;
-	border-bottom: 2px solid white;
-  padding: 20px 0;
-  color: #fff;
-  font-size: 19px;
 }
 .main {
   padding:0;
@@ -1420,16 +1450,24 @@ img {
 	section.menu ul li {
 		text-align: left;
 	}
+	
+	h2.section-title:before,
+	h2.section-title:after {
+		content: none;
+	}
 
 	.navbar-nav {
 		height: 0px;
 		overflow: hidden;
 		background: rgba(12,12,13,0.78);
-
 	}
 	.navbar-toggle {display: block;}
 
 	.navbar-nav > li {border-bottom: 1px solid; }
+	.footer-liebre {
+		margin-top: 15px;
+		float: none;
+	}
 
 	#header .menu-item a, #header.overflow .menu-item a {
 		font-size: 14px;
@@ -1571,10 +1609,6 @@ img {
 		height: 40px;
 		margin-left: -20px;
 		bottom:15px;
-	}
-	h2.section-title:before,
-	h2.section-title:after {
-		content: none;
 	}
 	section.timetable h2.section-title {
 		font-size: 16px;

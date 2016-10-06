@@ -206,7 +206,15 @@
       });
   
       $('nav.primary ul a').click(function(){
-        var selector = $(this).attr('data-filter');
+        let selector = $(this).attr('data-filter');
+        
+        let aryText = new Array();
+        aryText[".mi-cocina"]   = "¿Vos sabías que tengo dos cocinas? La Matriarca Tradicional donde te voy a preparar sopas, parrillas y variado caprichito, y La Matriarca del Mar, platos con mariscos sazonados con mis secreticos aprendidos en la costa.";
+        aryText[".restaurante"] = "Ve, conocé un poquito más de La Matriarca, un espacio lleno de cositas enamoradoras que la transforman en un lugar amañado.";
+        aryText[".boutique"]    = "Te voy a contar un chismecito: Todo lo que estás viendo en La Matriarca, ¡te lo vendo! Yo encantada de que el detallito más chiquito de acá sea parte de tu casa.";
+        
+        $("#galeria .section-subtitle").text(aryText[selector]);
+        
         $container.isotope({
           filter: selector,
           animationOptions: {
