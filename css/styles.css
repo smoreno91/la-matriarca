@@ -320,7 +320,8 @@ a:hover {
 	overflow: hidden;
 }
 #owl-main img {
-	
+  width: 100%;
+  max-height: 950px;
 }
 #owl-main .owl-prev,
 #owl-main .owl-next {
