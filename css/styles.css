@@ -305,11 +305,22 @@ a:hover {
 	background: #000;
 	position: relative;
 }
-#owl-main .owl-item {overflow: hidden;}
+#home-slider{
+	padding-top: 0px;
+}
+@media screen and (max-width: 1290px) {
+	#home-slider{
+		padding-top: 90px;	
+	}
+}
+#owl-main {
+	
+}
+#owl-main .owl-item {
+	overflow: hidden;
+}
 #owl-main img {
-	position: absolute;
-	max-width: none;
-	top: 0;
+	
 }
 #owl-main .owl-prev,
 #owl-main .owl-next {
@@ -379,32 +390,17 @@ a:hover {
 section.about .jt_row {
 	margin-bottom: 30px;
 }
-#owl-about2 .owl-prev {
-	width: 79px;
-	height: 79px;
-	background: url(../images/arrow-left.png) no-repeat center center;
-	font-size: 0;
-	float: left;
-	margin-left: 15px;
-	position: relative;
-	opacity: 0.3;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-	z-index:9999;
-	background-color: rgba(255,255,255,.01);
-}
-
+#owl-about .owl-prev,
+#owl-about .owl-next,
+#owl-about2 .owl-prev,
 #owl-about2 .owl-next {
 	width: 79px;
 	height: 79px;
-	background: url(../images/arrow-right.png) no-repeat center center;
 	font-size: 0;
 	float: right;
 	margin-right: 18px;
 	position: relative;
-	opacity: 0.3;
+	opacity: 1;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
@@ -412,6 +408,19 @@ section.about .jt_row {
 	z-index:9999;
 	background-color: rgba(255,255,255,.01);
 }
+#owl-about .owl-prev,
+#owl-about2 .owl-prev {
+	background: url(../images/arrow-left.png) no-repeat center center;
+	float: left;
+	margin-left: 15px;
+}
+#owl-about .owl-next,
+#owl-about2 .owl-next {
+	background: url(../images/arrow-right.png) no-repeat center center;
+	float: right;
+	margin-right: 18px;
+}
+#owl-about .owl-pagination,
 #owl-about2 .owl-pagination {
 	display: block;
 	width: 100%;
@@ -420,6 +429,7 @@ section.about .jt_row {
 	top:0px;
 	z-index: 9999;
 }
+#owl-about .owl-controls .owl-page span,
 #owl-about2 .owl-controls .owl-page span {
 	width: 13px;
 	height: 13px;
@@ -428,26 +438,38 @@ section.about .jt_row {
 	margin:31px 6px;
 	border:2px solid #C8C7C6;
 }
-#owl-about2 .owl-controls .owl-page.active span, #owl-about2 .owl-controls.clickable .owl-page:hover span {
+#owl-about .owl-controls .owl-page.active span,
+#owl-about .owl-controls.clickable .owl-page:hover span,
+#owl-about2 .owl-controls .owl-page.active span,
+#owl-about2 .owl-controls.clickable .owl-page:hover span {
 	background: #C8C7C6;
 	border-color:#C8C7C6;
 }
-#owl-about2 .owl-prev:hover,#owl-about2 .owl-next:hover {
+#owl-about .owl-prev:hover,
+#owl-about .owl-next:hover,
+#owl-about2 .owl-prev:hover,
+#owl-about2 .owl-next:hover {
 	opacity: 1;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
+#owl-about .owl-buttons,
 #owl-about2 .owl-buttons {
 	height: 43px;
 	position: absolute;
 	left: 0;
 	right: 0;
 	top:0;
-	bottom: 130px;
 	margin: auto;
 	z-index: 9999;
+}
+#owl-about .owl-buttons{
+	bottom: 60px;
+}
+#owl-about2 .owl-buttons {
+	bottom: 130px;
 }
 
 /* ==============================
@@ -460,9 +482,8 @@ section.about .jt_row {
 	border-radius: 50%;
 	border: 2px solid #fff;
 	position: absolute;
-	bottom: 50px;
 	left: 50%;
-	margin-left: -20px;
+	margin-top: -60px;
 	z-index: 99999;
 }
 .mouse span {
@@ -1163,6 +1184,7 @@ nav.primary ul li a {
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+	text-transform: uppercase;
 	color: #fff;
 	-webkit-transition:all .3s ease-in-out;
   -moz-transition:all .3s ease-in-out;
@@ -1306,7 +1328,8 @@ img {
 	#header {
 		top: 0px;
 	}
-	#owl-main .owl-prev, #owl-main .owl-next {display: none;}
+	#owl-main .owl-prev,
+	#owl-main .owl-next {display: none;}
 
 	.navbar-brand img {
 		max-width: 75%;
@@ -1509,9 +1532,11 @@ img {
 		font-size: 36px;
 		-webkit-font-smoothing:antialiased;
 	}
+	#owl-about .owl-prev,
 	#owl-about2 .owl-prev {
 		margin-left: 0;
 	}
+	#owl-about .owl-next,
 	#owl-about2 .owl-next {
 		margin-right: 0;
 	}
@@ -1560,9 +1585,6 @@ img {
 	.section.dark input[type="submit"]{
   	 padding-left: 10px;
 	}
-	.mouse {
-		width: 100%;
-	}
 	.jt_col {margin-bottom:30px;}
 	.section .jt_row {padding-bottom:50px;}
 	
@@ -1605,10 +1627,7 @@ img {
 		margin: 0px;
 	}
 	.mouse {
-		width: 40px;
-		height: 40px;
-		margin-left: -20px;
-		bottom:15px;
+		display: none;
 	}
 	section.timetable h2.section-title {
 		font-size: 16px;

@@ -81,7 +81,7 @@
     /**** CAROUSELS ****/
     if($("#owl-about").length){
       $("#owl-about").owlCarousel({
-        navigation: false,
+        navigation: true,
         pagination: false,
         autoPlay: true,
         slideSpeed: 300,
@@ -139,7 +139,7 @@
   	$(".loader").delay(500).fadeOut();
   	$("#mask").delay(1000).fadeOut("slow");
     
-    $('#home-slider').height($(window).height());
+    //$('#home-slider').height($(window).height());
         
     /* Home background slider */
     if($("#owl-main").length){
@@ -153,43 +153,6 @@
   			transitionStyle: "fade",
   			singleItem: true,
         paginationSpeed : 400,
-  	    afterInit: function() {
-          $('#home-slider').height($(window).height());
-          $('#home-slider #owl-main .item').height($(window).height());
-          $('#home-slider #owl-main img').height($(window).height());
-          $('#home-slider #owl-main img').width('auto');
-  
-          var left = ((($('#home-slider').width() - $('#home-slider #owl-main img').width())/2));
-          if (left<0) {
-            $('#home-slider #owl-main img').css('top', '0px' );
-            $('#home-slider #owl-main img').css('left', left + 'px' );
-          } else {
-            $('#home-slider #owl-main img').css('left', '0px' );
-            $('#home-slider #owl-main img').height('auto');
-            $('#home-slider #owl-main img').width($(window).width());
-            $('#home-slider #owl-main img').css('top', ((($('#home-slider').height() - $('#home-slider #owl-main img').height())/2)) + 'px' );
-          }
-        },
-        afterUpdate: function() {
-          $('#home-slider').height($(window).height());
-          if (!$('#home-slider').hasClass('fixed-height')) {
-            $('#home-slider #owl-main .item').height($(window).height());
-            $('#home-slider #owl-main img').height($(window).height());
-          } else {
-            $('#home-slider #owl-main .item').height(600);
-          }
-          $('#home-slider #owl-main img').width('auto');
-          var left = ((($('#home-slider').width() - $('#home-slider #owl-main img').width())/2));
-          if (left<0) {
-            $('#home-slider #owl-main img').css('top', '0px' );
-            $('#home-slider #owl-main img').css('left', left + 'px' );
-          } else {
-            $('#home-slider #owl-main img').css('left', '0px' );
-            $('#home-slider #owl-main img').height('auto');
-            $('#home-slider #owl-main img').width($(window).width());
-            $('#home-slider #owl-main img').css('top', ((($('#home-slider').height() - $('#home-slider #owl-main img').height())/2)) + 'px' );
-          }
-        }
   	  });
     }
 
@@ -245,7 +208,7 @@
 
   //Set home slider height on resize
   $(window).resize(function () {
-    $('#home-slider').height($(window).height());
+    //$('#home-slider').height($(window).height());
   });
 
   /* Parallax */
