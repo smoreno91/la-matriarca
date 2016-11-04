@@ -20,6 +20,11 @@ MENSAJE: ".$postMessage = $_POST['message']."<br>";
 	$headers .= "Content-Type: text/html";
 	
 	//envio destinatario
-	$mail_success =  mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers);		
+	//if (mail($to, $subject, $message, $headers)) {
+	if (mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers)) {
+    echo "Mail Sent.";
+  } else {
+    echo "failed";
+  }
 }
 ?>  
