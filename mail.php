@@ -21,10 +21,21 @@ MENSAJE: ".$postMessage = $_POST['message']."<br>";
 	
 	//envio destinatario
 	//if (mail($to, $subject, $message, $headers)) {
-	if (mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers)) {
+/*	if (mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers)) {
     echo "Mail Sent.";
   } else {
     echo "failed";
-  }
+  }*/
+  
+  require 'vendor/autoload.php';
+$sendgrid = new SendGrid("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");
+$email    = new SendGrid\Email();
+
+$email->addTo($mailTo)
+      ->setFrom("info@lamatriarca.com")
+      ->setSubject($subject)
+      ->setHtml($body);
+
+$sendgrid->send($email);
 }
 ?>  
