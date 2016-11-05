@@ -21,10 +21,31 @@ MENSAJE: ".$postMessage = $_POST['message']."<br>";
 	
 	//envio destinatario
 	//if (mail($to, $subject, $message, $headers)) {
-	if (mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers)) {
+	/*if (mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers)) {
     echo "Mail Sent.";
   } else {
     echo "failed";
-  }
+  }*/
+  require 'lib/swift_init.php';
+  require 'mailgun-credentials.php';
+
+// Create the Transport
+$transport = Swift_SmtpTransport::newInstance('smtp.mailgun.org', 25)
+  ->setUsername($LOGIN)
+  ->setPassword($PASSWORD)
+  ;
+
+// Create the Mailer using your created Transport
+$mailer = Swift_Mailer::newInstance($transport);
+
+// Create a message
+$message = Swift_Message::newInstance($postSubject)
+  ->setFrom(array($postEmail => $postName))
+  ->setTo(array($mailTo))
+  ->setBody($body)
+  ;
+
+// Send the message
+echo $mailer->send($message);
 }
 ?>  
