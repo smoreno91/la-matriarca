@@ -26,7 +26,7 @@ MENSAJE: ".$postMessage = $_POST['message']."<br>";
   } else {
     echo "failed";
   }*/
-  require 'lib/swift_init.php';
+  require 'lib/swift_required.php';
   require 'mailgun-credentials.php';
 
 // Create the Transport
