@@ -752,6 +752,11 @@ section.timetable .number {
 	font-size: 22px;
 	text-align: center;
 }
+section.timetable .phone {
+	color: #fff;
+	clear: left;
+    display: inline-block;
+}
 
 /* ==============================
    16. Menu section
