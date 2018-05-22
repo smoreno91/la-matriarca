@@ -1795,3 +1795,21 @@ span.dark {
 	}
 }
 
+
+.issuuembed {
+	margin: auto;
+	width: 320px;
+	height: 400px;
+}
+@media (min-width: 500px) {
+	.issuuembed {
+		width: 450px;
+		height: 450px;
+	}
+}
+@media (min-width: 700px) {
+	.issuuembed {
+		width: 600px;
+		height: 500px;
+	}
+}
